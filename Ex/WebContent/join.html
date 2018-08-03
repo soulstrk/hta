@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+form {
+	border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #00cc00;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.joinBtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+
+.id_pw {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+	float: right;
+}
+
+input[type=radio]{
+	display: none;
+	margin: 10px;
+}
+
+input[type=radio]label{
+	display: inline-block;
+	margin: -2px;
+	padding: 8px 19px;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	font-size: 13px !important;
+	width: 110px;
+	text-align: center;	
+}
+
+input[type=radio]:radio + label{
+	background-image: none;
+	background-color: #3598dc;
+	color: #fff;
+}
+
+.container {
+	padding: 16px;
+}
+
+form {
+	width: 400px;
+	margin: 80px auto 0px auto;
+}
+.gen{
+	cursor: pointer;
+	padding: 5px 22.3%;
+}
+</style>
+<body>
+	<form action="insert.do">
+		<div class="container">
+			<h1>회원가입</h1>
+			<label for="id">아이디</label>
+			<input type="text" name="id" id="id" placeholder="아이디를 입력하세요" required><br>
+			<label for="pwd">비밀번호</label>
+			<input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요" required><br>
+			<label for="pwd2">비밀번호 재확인</label>
+			<input type="password" name="pw2" id="pwd2" placeholder="비밀번호를 학인하세요" required><br>
+			<label for="name">이름</label>
+			<input type="text" name="name" id="name" placeholder="이름을 입력하세요" required><br>
+			<label for="bday">생년월일</label>
+			<input type="text" name="birth" id="birth" placeholder="생년월일을 입력하세요" required><br>
+			<div>성별</div><br>
+			<div>
+				<label class="gen" for="man">남</label>
+				<label class="gen" for="woman">여</label>
+			</div>
+			<input type="radio" name="gender" value="남" id="man" required>
+			<input type="radio" name="gender" value="여" id="woman" required><br>
+			<label for="phone">휴대전화</label>
+			<input type="text" name="phone" id="phone" placeholder="전화번호를 입력하세요" required><br>
+			<button type="submit">가입하기</button>
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+var gen = document.getElementsByClassName("gen");
+gen[0].onclick = function(){
+	var r1 = document.getElementById("woman");
+	if(r1.checked == true){
+		gen[1].style.border = "none";
+	}
+	this.style.border = "1px solid #00cc00";
+}
+
+gen[1].onclick = function(){
+	var r0 = document.getElementById("man");
+	if(r0.checked == true){
+		gen[0].style.border = "none";
+	}
+	this.style.border = "1px solid #00cc00";
+}
+</script>
+</html>
