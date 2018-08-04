@@ -38,4 +38,24 @@ public class FroxDao {
 		}
 		return w;
 	}
+	
+	public int checkId(String id) {
+		String sql = "select * from froxmembers where id = ?";
+		try {
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				return -1; //있는 아이디일 경우 반환값
+			}else {
+				return 1; //없는 아이디일 경우 반환값
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println("insertMember메소드");
+			return 1;
+		}finally {
+			DBConnection.closeConn(null, ps, conn);
+		}
+	}
 }

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+form {
+	border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #00cc00;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.joinBtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+
+.id_pw {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+	float: right;
+}
+
+.container {
+	padding: 16px;
+}
+
+form {
+	width: 400px;
+	margin: 200px auto 0px auto;
+}

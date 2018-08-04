@@ -1,17 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="js/yong.js"></script>
 <link rel="stylesheet" href="CSS/join.css?ver=4">
+<%
+	String id = request.getParameter("chkId");
+	System.out.println(id);
+	if(id == null){ id = " "; }else{%>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#id').val('<%= id %>'); 
+		});
+	</script>
+<%		
+	}
+%>
 <body>
-	<form action="insert.do">
+	<form action="insert.do" name="userInfo">
 		<div class="container">
 			<h1>회원가입</h1>
 			<label for="id">아이디</label><div class="checkSpan"><img id="checkImg" alt="x" src=""></div>
 			<input type="text" name="id" id="id" placeholder="아이디를 입력하세요 (8~12자 영대소문자와 숫자)" required onkeyup="idLiveCheck()"><br>
-			<button type="button" >중복확인</button>
+			<button type="button" onclick="openIdChk()">중복확인</button>
+			<input type="hidden" name="idDuplication" value="idUnCheck">
 			<label for="pwd">비밀번호</label><div class="checkSpan"><img id="checkImg1" alt="x" src=""></div>
 			<input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요 (8~20자 숫자,특수문자 포함)" required onkeyup="pwd1LiveCheck()"><br>
 			<label for="pwd2">비밀번호 재확인</label><span class="checkSpan1"></span>

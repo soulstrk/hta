@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.frox.Service.CheckIdService;
 import com.frox.Service.InsertService;
 import com.frox.Service.Service;
 
@@ -55,6 +56,10 @@ public class FrontController extends HttpServlet {
 			service = new InsertService();
 			service.execute(request, response);
 			viewPage = "index.html";
+		}else if(com.equals("/checkId.do")) {
+			service = new CheckIdService();
+			service.execute(request, response);
+			viewPage = "openIdChk.jsp";
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);

@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+form {
+	border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #00cc00;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.joinBtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+
+.id_pw {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+	float: right;
+}
+
+input[type=radio]{
+	display: none;
+	margin: 10px;
+}
+
+input[type=radio]label{
+	display: inline-block;
+	margin: -2px;
+	padding: 8px 19px;
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	font-size: 13px !important;
+	width: 110px;
+	text-align: center;	
+}
+
+input[type=radio]:radio + label{
+	background-image: none;
+	background-color: #3598dc;
+	color: #fff;
+}
+
+.container {
+	padding: 16px;
+}
+
+form {
+	width: 400px;
+	margin: 80px auto 0px auto;
+}
+.gen{
+	cursor: pointer;
+	padding: 5px 22.3%;
+}
+.checkSpan{
+	display: inline-block;
+	text-indent: 150px;
+}
+.checkSpan1{
+	display: inline-block;
+	text-indent: 40px;
+	color: blue;
+}
+#checkImg{
+	margin-top: -15px;margin-left: 30px;position: absolute;width:16px;height: 16px;
+	display: none;
+}
+#checkImg1{
+	margin-top: -15px;margin-left: 30px;position: absolute;width:16px;height: 16px;
+	display: none;
+}
+#checkImg2{
+	margin-top: -15px;margin-left: 30px;position: absolute;width:16px;height: 16px;
+	display: none;
+}
+
