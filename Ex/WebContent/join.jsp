@@ -23,7 +23,7 @@
 <body>
 	<form action="insert.do" name="userInfo">
 		<div class="container">
-			<h1>회원가입</h1>
+			<h1>회원가입1</h1>
 			<label for="id">아이디</label><div class="checkSpan"><img id="checkImg" alt="x" src=""></div>
 			<input type="text" name="id" id="id" placeholder="아이디를 입력하세요 (8~12자 영대소문자와 숫자)" required onkeyup="idLiveCheck()"><br>
 			<button type="button" onclick="openIdChk()">중복확인</button>
