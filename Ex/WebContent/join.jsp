@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="CSS/join.css?ver=4">
 <%
 	String id = request.getParameter("chkId");
-	System.out.println(id);
 	if(id == null){ id = " "; }else{%>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -44,8 +43,8 @@
 			<input type="radio" name="gender" value="남" id="man" required>
 			<input type="radio" name="gender" value="여" id="woman" required><br>
 			<label for="phone">휴대전화</label>
-			<input type="text" name="phone" id="phone" placeholder="전화번호를 입력하세요" required><br>
-			<button type="submit">가입하기</button>
+			<input type="text" name="phone" id="phone" placeholder="010-1234-12xx &nbsp ( '-' 포함 입력 )" required ><br>
+			<button type="submit" onclick="return finalCheck()">가입하기</button>
 		</div>
 	</form>
 <script type="text/javascript">

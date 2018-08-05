@@ -37,7 +37,7 @@
 <form name="form1">
 	<input type="text" name="chkId" value="<%= chkId %>" id="chkId">
 	<button type="button" onclick="checkId()">중복확인</button>
-	<div>
+	<div id="chkDiv">
 		<%= check %>
 	</div><br><br>
 	<button type="button" onclick="close1()">확인</button>
@@ -45,15 +45,16 @@
 	
 	
 <script type="text/javascript">
-	function checkId() {
-		var chkId = document.getElementById('chkId').value;
-		location.href = "checkId.do?id="+chkId+"";
-	}
 	function close1() { //parentForm
 		var chkId = document.getElementById('chkId').value;
-		document.form1.action = "join.jsp";
+		if(!(idCheck(chkId))){
+			alert('잘못된 입력입니다.');
+			return;
+		}
+		/* document.form1.action = "join.jsp";
 		document.form1.target = "parentForm";
-		document.form1.submit();
+		document.form1.submit(); */
+		this.opener.document.getElementById('id').value = chkId;
 		window.close();
 		}
 </script>
